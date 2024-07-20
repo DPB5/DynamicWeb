@@ -18,7 +18,14 @@
   <header class="page__header">
     <nav class="navbar__menu">
       <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list"></ul>
+      <ul id="navbar__list">
+          <li><button onclick="smoothScrollToSection(1)">Section 1</button></li>
+          <li><button onclick="smoothScrollToSection(2)">Section 2</button></li>
+          <li><button onclick="smoothScrollToSection(3)">Section 3</button></li>
+          <li><button onclick="smoothScrollToSection(4)">Section 4</button></li>
+          <li><button onclick="smoothScrollToSection(5)">Section 5</button></li>
+          <li><button onclick="smoothScrollToSection(6)">Section 6</button></li>
+      </ul>
     </nav>
   </header>
   <main>
@@ -77,16 +84,36 @@
           porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
       </div>
     </section>
-
+    <section id="section4" data-nav="Section 4">
+      <div class="landing__container">
+        <h2>Unexpected Uses for Common Household Items</h2>
+        <p>This section would explore surprising and creative ways to use everyday objects for purposes beyond their original design.</p>
+      </div>
+    </section>
+     <section id="section5" data-nav="Section 5" class="active">
+      <div class="landing__container">
+        <h2>The Secret Language of Animals</h2>
+        <p>This section would delve into the fascinating world of animal communication, exploring how different species use sounds, body language, and other signals to interact with each other.</p>
+      </div>
+    </section>
+<section id="section6" data-nav="Section 6">
+      <div class="landing__container">
+        <h2>Exploring the Mysteries of the Deep Sea</h2>
+        <p>This section would plunge into the uncharted depths of the ocean, uncovering the strange and wonderful creatures that inhabit this alien environment.</p>
+      </div>
+    </section>
   </main>
+  <div class="comment-section">
+       <h2>Leave a Comment</h2> <form id="comment-form"> 
+           <label for="name">Name:</label> 
+           <input type="text" id="name" name="name"> 
+           <label for="email">Email:</label> <input type="email" id="email" name="email"> 
+           <label for="comment">Comment:</label> <textarea id="comment" name="comment"></textarea> 
+           <button type="submit">Submit</button> </form> <div id="comments-container"></div> 
+           </div>
   <footer class="page__footer">
-    <p>&copy Udacity</p>
+    <p>&copy Udacity and Mostafa Adel</p>
   </footer>
-
+  <script src = 'js/app.js'></script>
 </body>
-<!-- TODO:
-  - Load the JavaScript file
-  - Add one or more new sections to the page
--->
-
 </html>
