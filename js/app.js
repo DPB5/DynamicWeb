@@ -45,5 +45,30 @@ document.addEventListener('DOMContentLoaded', () => {
       // Clear input 
       commentForm.reset()
   });
+  function checkActiveSection() {
+    const sections = document.querySelectorAll('section');
+    let activeSection = null;
+  
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+  
+      if (window.scrollY >= sectionTop - sectionHeight / 3) {
+        activeSection = section;
+      }
+    });
+  
+    // Remove the active class 
+    sections.forEach(section => section.classList.remove('active'));
+  
+    // Add the active class to the viewport
+    if (activeSection) {
+      activeSection.classList.add('active');
+    }
+  }
+  
+  checkActiveSection();
+  window.addEventListener('scroll', checkActiveSection);
+  
 });
 //mission successful 
