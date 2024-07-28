@@ -1,19 +1,5 @@
 //reviewer told me to add comments so yeah
-function smoothScrollToSection(sectionNumber) {
-  // create an ID for the 
-  const sectionId = 'section' + sectionNumber; 
-  // find the section
-  const section = document.getElementById(sectionId);
-  
-  // if the section is actually there found
-  if (section) { 
-    // smooth scroll to section
-    section.scrollIntoView({ behavior: 'smooth' });
-  } else {
-    // in case it was not found
-    console.error('Section not found:', sectionId);
-  }
-}
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.main__hero');
