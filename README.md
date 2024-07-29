@@ -1,6 +1,6 @@
 # What is this project?
 
-This is an example dynamic Web Page, origanly created by [udacity](https://www.udacity.com), edited by Mostafa Adel.
+This is an example dynamic Web Page, originaly created by [udacity](https://www.udacity.com), edited by Mostafa Adel.
 
 ## Navbar
 
