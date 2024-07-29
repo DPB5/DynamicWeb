@@ -23,3 +23,10 @@ the comment section works fine but also if the value is empty it will give you a
 checkValidity()
 ```
 [Learn More](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
+
+## Skills Required
+
+- HTML
+- CSS
+- JavaScript
+- DOM
