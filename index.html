@@ -1,119 +1,222 @@
 <!DOCTYPE>
+
 <html lang="en">
 
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Dynamic Web Page</title>
-  <!-- Load Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
-  <!-- Load Styles -->
-  <link href="css/styles.css" rel="stylesheet">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<title>Dynamic Web Page</title>
+
+<!-- Load Google Fonts -->
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
+
+<!-- Load Styles -->
+
+<link href="css/styles.css" rel="stylesheet">
+
 </head>
 
+
 <body>
-  <!-- HTML Follows BEM naming conventions
-  IDs are only used for sections to connect menu achors to sections -->
-  <header class="page__header">
-    <nav class="navbar__menu">
-      <!-- Navigation starts as empty UL that will be populated with JS -->
-      <ul id="navbar__list">
-      <li><button onclick="scrollToSection('section1')">Section 1</button></li>
-      <li><button onclick="scrollToSection('section2')">Section 2</button></li>
-      <li><button onclick="scrollToSection('section3')">Section 3</button></li>
-      <li><button onclick="scrollToSection('section4')">Section 4</button></li>
-      <li><button onclick="scrollToSection('section5')">Section 5</button></li>
-      <li><button onclick="scrollToSection('section6')">Section 6</button></li> 
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <header class="main__hero">
-      <h1>Dynamic Web Page</h1>
-    </header>
-    <!-- Each Section has an ID (used for the anchor) and
-    a data attribute that will populate the li node.
-    Adding more sections will automatically populate nav.
-    The first section is set to active class by default -->
-    <section id="section1" data-nav="Section 1" class="active">
-      <div class="landing__container">
-        <h2>Section 1</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
-          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
-          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
-          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
-          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
-          semper in tellus. Sed congue et odio sed euismod.</p>
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
-          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
-          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section2" data-nav="Section 2">
-      <div class="landing__container">
-        <h2>Section 2</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
-          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
-          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
-          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
-          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
-          semper in tellus. Sed congue et odio sed euismod.</p>
+<!-- HTML Follows BEM naming conventions
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
-          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
-          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section3" data-nav="Section 3">
-      <div class="landing__container">
-        <h2>Section 3</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
-          dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
-          imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
-          bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-          elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
-          nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
-          semper in tellus. Sed congue et odio sed euismod.</p>
+IDs are only used for sections to connect menu achors to sections -->
 
-        <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
-          luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
-          porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
-      </div>
-    </section>
-    <section id="section4" data-nav="Section 4">
-      <div class="landing__container">
-        <h2>Section 4</h2>
-        <p>This section would explore surprising and creative ways to use everyday objects for purposes beyond their original design.</p>
-      </div>
-    </section>
-     <section id="section5" data-nav="Section 5" class="active">
-      <div class="landing__container">
-        <h2>Section 5</h2>
-        <p>This section would delve into the fascinating world of animal communication, exploring how different species use sounds, body language, and other signals to interact with each other.</p>
-      </div>
-    </section>
+<header class="page__header">
+
+<nav class="navbar__menu">
+
+<!-- Navigation starts as empty UL that will be populated with JS -->
+
+<ul id="navbar__list">
+
+<button onclick="scrollToSection('section1')">Section 1</button> <button onclick="scrollToSection('section2')">Section 2</button> <button onclick="scrollToSection('section3')">Section 3</button> <button onclick="scrollToSection('section4')">Section 4</button> <button onclick="scrollToSection('section5')">Section 5</button> <button onclick="scrollToSection('section6')">Section 6</button> 
+</ul>
+
+</nav>
+
+</header>
+
+<main>
+
+<header class="main__hero">
+
+<h1>Dynamic Web Page</h1>
+
+</header>
+
+<!-- Each Section has an ID (used for the anchor) and
+
+a data attribute that will populate the li node.
+
+Adding more sections will automatically populate nav.
+
+The first section is set to active class by default -->
+
+<section id="section1" data-nav="Section 1" class="active">
+
+<div class="landing__container">
+
+<h2>Section 1</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+
+dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+
+imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+
+bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+
+elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+
+nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+
+semper in tellus. Sed congue et odio sed euismod.</p>
+
+
+<p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+
+luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+
+porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+
+</div>
+
+</section>
+
+<section id="section2" data-nav="Section 2">
+
+<div class="landing__container">
+
+<h2>Section 2</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+
+dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+
+imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+
+bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+
+elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+
+nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+
+semper in tellus. Sed congue et odio sed euismod.</p>
+
+
+<p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+
+luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+
+porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+
+</div>
+
+</section>
+
+<section id="section3" data-nav="Section 3">
+
+<div class="landing__container">
+
+<h2>Section 3</h2>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus pharetra
+
+dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget lacinia ex. Phasellus
+
+imperdiet porta orci eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget
+
+bibendum consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
+
+elit a pharetra. Duis lectus mi, aliquam in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo
+
+nunc, pharetra et elementum non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie
+
+semper in tellus. Sed congue et odio sed euismod.</p>
+
+
+<p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit, vel
+
+luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum consectetur
+
+porttitor. Suspendisse imperdiet porttitor tortor, eget elementum tortor mollis non.</p>
+
+</div>
+
+</section>
+
+<section id="section4" data-nav="Section 4">
+
+<div class="landing__container">
+
+<h2>Section 4</h2>
+
+<p>This section would explore surprising and creative ways to use everyday objects for purposes beyond their original design.</p>
+
+</div>
+
+</section>
+
+<section id="section5" data-nav="Section 5" class="active">
+
+<div class="landing__container">
+
+<h2>Section 5</h2>
+
+<p>This section would delve into the fascinating world of animal communication, exploring how different species use sounds, body language, and other signals to interact with each other.</p>
+
+</div>
+
+</section>
+
 <section id="section6" data-nav="Section 6">
-      <div class="landing__container">
-        <h2>Section 6</h2>
-        <p>This section would plunge into the uncharted depths of the ocean, uncovering the strange and wonderful creatures that inhabit this alien environment.</p>
-      </div>
-    </section>
-  </main>
-  <div class="comment-section">
-       <h2>Leave a Comment</h2> <form id="comment-form"> 
-           <label for="name">Name:</label> 
-           <input type="text" id="name" name="name"> 
-           <label for="email">Email:</label> <input type="email" id="email" name="email"> 
-           <label for="comment">Comment:</label> <textarea id="comment" name="comment"></textarea> 
-           <button type="submit">Submit</button> </form> <div id="comments-container"></div> 
-           </div>
-  <footer class="page__footer">
-    <p>&copy Udacity and Mostafa Adel</p>
-  </footer>
-  <script src = 'js/app.js'></script>
+
+<div class="landing__container">
+
+<h2>Section 6</h2>
+
+<p>This section would plunge into the uncharted depths of the ocean, uncovering the strange and wonderful creatures that inhabit this alien environment.</p>
+
+</div>
+
+</section>
+
+</main>
+
+<div > 
+    <h2>Leave a Comment</h2> 
+    <form id='commentForm'>
+       <label for="name">Name:</label>
+       <input type="text" id="name" name="name" required> <br> 
+       <label for="email">Email:</label> 
+       <input type="email" id="email" name="email" required> <br> 
+       <label for="comment">Comment:</label>   
+
+
+<textarea id="comment" name="comment" required>
+  
+</textarea> <br> <button type="submit">Submit</button> </form> <div id="commentSection"></div>   
+
+
+<footer class="page__footer">
+
+<p>&copy Udacity and Mostafa Adel</p>
+
+</footer>
+
+<script src = 'js/app.js'></script>
+
 </body>
+
 </html>
+
+
