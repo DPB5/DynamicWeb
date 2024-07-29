@@ -1,10 +1,25 @@
-The project I worked on so hard...
-*suspense music*
-I present you....
-THE DYNAMIC PROJECT WEBSITE:
+# What is this project?
 
-This project has 6 different sections every section talks about something very interesting that it will put you at the edge of your seat (even if our sitting on a couch)
-In the navbar, pressing a button will scroll it down to the interesting title without you, it scrolls very smoothly.
-In the comment section you write what you feel, wht you think , asking  more question to fulfill your knowledge.
+This is an example dynamic Web Page, origanly created by [udacity](https://www.udacity.com), edited by Mostafa Adel.
 
-after you review the website, your day will be better.   
+## Navbar
+
+Navbar is used to scroll through sections in page, the scrolling is very smooth. 
+,,,js
+// used for smooth scrolling
+scrollIntoView();
+,,,
+[Learn more](https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollIntoView)
+
+## Sections
+
+each section contains informative info that changes its style when the user's viewport is in it, all this happened using an [Active state](https://www.w3schools.com/howto/howto_js_active_element.asp)
+
+## Comment section 
+
+the comment section works fine but also if the value is empty it will give you an error.
+,,,js
+//used to check if value is empty
+checkValidity()
+,,,
+[Learn More](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
