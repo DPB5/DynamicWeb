@@ -78,3 +78,10 @@ function scrollToSection(sectionId) {
 
    buildNavBar(); //build the navbar
 
+
+   const sections = document.querySelectorAll('section');
+   sections.forEach(section => {
+     section.style.backgroundColor = 'lightblue';
+   });
+   
+
