@@ -81,7 +81,7 @@ function scrollToSection(sectionId) {
 
    const sections = document.querySelectorAll('section');
    sections.forEach(section => {
-     section.style.backgroundColor = 'lightblue';
+     section.style.color = 'Blue';
    });
    
 
