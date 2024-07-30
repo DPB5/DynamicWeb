@@ -74,15 +74,6 @@ function scrollToSection(sectionId) {
       { name: 'section5', link: '#section5' },
       { name: 'section6', link: '#section6' }
     ];
-
-    navItems.forEach(item => {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = item.link;
-      a.textContent = item.name;
-      li.appendChild(a);
-      navbar.appendChild(li);
-    });
   }
 
    buildNavBar(); //build the navbar
