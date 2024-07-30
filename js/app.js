@@ -1,10 +1,4 @@
-// Function to scroll to a specific section by ID with smooth animation
-function scrollToSection(sectionId) {
-  document.getElementById(sectionId).scrollIntoView({
-    behavior: 'smooth'
-  });
-}
-  // Get a reference to the comment form element
+// Get a reference to the comment form element
   document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.main__hero'); 
   const headerPosition = header?.getBoundingClientRect(); 
@@ -83,5 +77,44 @@ function scrollToSection(sectionId) {
    sections.forEach(section => {
      section.style.color = 'Blue';
    });
+   const navItems = [
+      { name: "Section 1", link: "#section1" },
+        { name: "Section 2", link: "#section2" },
+          { name: "Section 3", link: "#section3" },
+            { name: "Section 4", link: "#section4" },
+              { name: "Section 5", link: "#section5" },
+                { name: "Section 6", link: "#section6" }
+                ];
+
+                // Get the navbar list element
+                const navbarList = document.getElementById('navbar__list');
+
+                // Function to create a navigation item
+                function createNavItem(name, link) {
+                  const li = document.createElement('li');
+                    const a = document.createElement('a');
+                      a.textContent = name;
+                        a.href = link;
+                          li.appendChild(a);
+                            return li;
+        }
+
+                            // Populate the navbar with the navigation items
+  navItems.forEach(item => {
+ const navItem = createNavItem(item.name, item.link);
+                            
+ navbarList.appendChild(navItem);
+            });
+
+    // Smooth scrolling function
+   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+     });
+     });
+    })
+   ]
    
 

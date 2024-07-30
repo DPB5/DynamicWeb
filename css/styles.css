@@ -304,3 +304,48 @@ button:hover{
 section.active{
     color: darkblue;
 }
+#navbar__list {
+
+    list-style-type: none;
+
+    margin: 0;
+
+    padding: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    font-family: 'sans-serif';
+
+    }
+
+
+    /* Styling for the navbar list items */
+
+    #navbar__list li {
+
+    margin: 0 15px;
+
+    }
+
+
+    /* Styling for the navbar links */
+
+    #navbar__list li a {
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    }
+
+
+    /* Hover effect for the navbar links */
+
+    #navbar__list li a:hover {
+
+    color: #ff6347; /* Tomato color */
+
+    }
+
