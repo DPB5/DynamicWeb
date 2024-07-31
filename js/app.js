@@ -57,64 +57,37 @@
   checkActiveSection();
   window.addEventListener('scroll', checkActiveSection);
 
-  // Function to build the navigation bar (optional)
-  function buildNavBar() {
-    const navbar = document.getElementById('navbar__list');
     const navItems = [
-      { name: 'section1', link: '#section1' },
-      { name: 'section2', link: '#section2' },
-      { name: 'section3', link: '#section3' },
-      { name: 'section4', link: '#section4' },
-      { name: 'section5', link: '#section5' },
-      { name: 'section6', link: '#section6' }
-    ];
-  }
-
-   buildNavBar(); //build the navbar
-
-
-   const sections = document.querySelectorAll('section');
-   sections.forEach(section => {
-     section.style.color = 'Blue';
-   });
-   const navItems = [
       { name: "Section 1", link: "#section1" },
-        { name: "Section 2", link: "#section2" },
-          { name: "Section 3", link: "#section3" },
-            { name: "Section 4", link: "#section4" },
-              { name: "Section 5", link: "#section5" },
-                { name: "Section 6", link: "#section6" }
-                ];
-
-                // Get the navbar list element
-                const navbarList = document.getElementById('navbar__list');
-
-                // Function to create a navigation item
-                function createNavItem(name, link) {
-                  const li = document.createElement('li');
-                    const a = document.createElement('a');
-                      a.textContent = name;
-                        a.href = link;
-                          li.appendChild(a);
-                            return li;
-        }
-
-                            // Populate the navbar with the navigation items
-  navItems.forEach(item => {
- const navItem = createNavItem(item.name, item.link);
-                            
- navbarList.appendChild(navItem);
-            });
-
+      { name: "Section 2", link: "#section2" },
+      { name: "Section 3", link: "#section3" },
+      { name: "Section 4", link: "#section4" },
+      { name: "Section 5", link: "#section5" },
+      { name: "Section 6", link: "#section6" }
+    ];
+  
+    // Function to build the navigation bar
+    function buildNavBar() {
+        const navbar = document.getElementById('navbar');
+        navItems.forEach(item => {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.href = item.link;
+            a.textContent = item.name;
+            li.appendChild(a);
+            navbar.appendChild(li);
+        });
+    }
+  
+    // Call the function to build the navigation bar
+    buildNavBar();
+  
     // Smooth scrolling function
-   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-     });
-     });
-    })
-   ]
-   
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
 
